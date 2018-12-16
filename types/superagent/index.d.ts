@@ -117,7 +117,7 @@ declare namespace request {
         xhr: XMLHttpRequest;
     }
 
-    interface Request extends Promise<Response> {
+    interface Request extends PromiseLike<Response> {
         abort(): void;
         accept(type: string): this;
         attach(field: string, file: MultipartValueSingle, options?: string | { filename?: string; contentType?: string }): this;
